@@ -1,2 +1,2 @@
 # Henger
-unviersty assingment at GDE, 'elosztott alkalmazások'
+university assingment at GDE, 'Elosztott alkalmazások'
