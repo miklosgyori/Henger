@@ -2,6 +2,10 @@ package test.java.henger.model;
 
 import main.java.henger.model.Henger;
 
+/**
+ * A Henger osztaly egyszeru tesztelesere.
+ * ChatGPT-vel generalva, minimalisan modositva.
+ */
 public class HengerTest {
     private static final double EPS = 1e-6;
 
