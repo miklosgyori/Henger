@@ -60,22 +60,21 @@ public class HengerView extends JFrame {
 
         pack();
         setSize(500, 200);
-        setMinimumSize(new Dimension(400, 200));
+        setMinimumSize(new Dimension(500, 200));
         setLocationRelativeTo(null);
     }
 
     public String getMagassagText()  { return magassagField.getText(); }
     public String getSugarText()     { return sugarField.getText(); }
-    public void   setTerfogatText(String t) { terfogatLabel.setText("V = " + t); }
-    public void   setFeluletText(String f)  { feluletLabel.setText("A = " + f); }
-    public void   addCalcListener(ActionListener l) { szamolasButton.addActionListener(l); }
+    public void   setTerfogatText(String s) { terfogatLabel.setText("V = " + s); }
+    public void   setFeluletText(String s)  { feluletLabel.setText("A = " + s); }
+    public void addSzamolasListener(ActionListener l) { szamolasButton.addActionListener(l); }
 
     /**
      * Csak az osztaly gyors tesztelesere, meg mielott a controller es az App osztalyok elkeszulnek.
      * @param args - irrelevans
      */
     public static void main(String[] args) {
-        // Always start Swing UIs on the EDT
         SwingUtilities.invokeLater(() -> {
             HengerView view = new HengerView();
             view.setTerfogatText("..........");
