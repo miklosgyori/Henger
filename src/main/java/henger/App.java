@@ -5,6 +5,9 @@ import main.java.henger.view.HengerView;
 
 import javax.swing.*;
 
+/**
+ * Az alkalmazas belepesi pontja.
+ */
 public class App {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
