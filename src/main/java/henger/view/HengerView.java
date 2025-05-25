@@ -12,8 +12,8 @@ public class HengerView extends JFrame {
     private final JTextField magassagField = new JTextField(10);
     private final JTextField sugarField = new JTextField(10);
     private final JButton szamolasButton = new JButton("Számol");
-    private final JLabel terfogatLabel = new JLabel("V: ");
-    private final JLabel feluletLabel = new JLabel("A: ");
+    private final JLabel terfogatLabel = new JLabel("V = ");
+    private final JLabel feluletLabel = new JLabel("A = ");
 
     public HengerView() {
 
@@ -24,35 +24,43 @@ public class HengerView extends JFrame {
         gbc.insets = new Insets(4,4,4,4);
         gbc.anchor = GridBagConstraints.WEST;
 
-        // Sugar
-        gbc.gridx = 0; gbc.gridy = 0;
+        // Sugar elemek
+        gbc.gridx = 0;
+        gbc.gridy = 0;
         add(new JLabel("R:"), gbc);
 
-        gbc.gridx = 0;  gbc.gridy = 1;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
         add(sugarField, gbc);
 
-        // Magassag
-        gbc.gridx = 1; gbc.gridy = 0;
+        // Magassag elemek
+        gbc.gridx = 1;
+        gbc.gridy = 0;
         add(new JLabel("M:"), gbc);
 
         gbc.gridx = 1;  gbc.gridy = 1;
         add(magassagField, gbc);
 
-        // Terfogat
-        //gbc.gridwidth = 1; gbc.anchor = GridBagConstraints.WEST;
-        gbc.gridx = 2; gbc.gridy = 1;
+        // Terfogat elem
+        gbc.gridx = 2;
+        gbc.gridy = 1;
         add(terfogatLabel, gbc);
 
-        // Felulet
-        gbc.gridx = 3; gbc.gridy = 1;
+        // Felulet elem
+        gbc.gridx = 3;
+        gbc.gridy = 1;
         add(feluletLabel, gbc);
 
         // "Szamol" gomb
-        gbc.gridx = 0; gbc.gridy = 2; gbc.gridwidth = 2; gbc.anchor = GridBagConstraints.WEST;
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
         add(szamolasButton, gbc);
+        gbc.gridwidth = 1;
 
         pack();
-        setSize(800, 300);
+        setSize(500, 200);
+        setMinimumSize(new Dimension(400, 200));
         setLocationRelativeTo(null);
     }
 
@@ -70,10 +78,8 @@ public class HengerView extends JFrame {
         // Always start Swing UIs on the EDT
         SwingUtilities.invokeLater(() -> {
             HengerView view = new HengerView();
-            // Optional: pre-populate fields and labels so you can see
-            view.setTerfogatText("…");
-            view.setFeluletText("…");
-            //view.pack();
+            view.setTerfogatText("..........");
+            view.setFeluletText("..........");
             view.setVisible(true);
         });
     }
